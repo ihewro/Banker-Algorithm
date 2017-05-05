@@ -270,6 +270,9 @@ public class Main extends JFrame {
 				}else if (!isNumeric(RequestProgressName.getText()) || !isNumeric(RequestProgressA.getText()) ||
 						!isNumeric(RequestProgressB.getText()) || !isNumeric(RequestProgressC.getText())) {
 					safeArgsInfo.setText("只能填写数字！");
+				}else if (Integer.parseInt(RequestProgressName.getText())>4 || 
+						Integer.parseInt(RequestProgressName.getText())<0) {
+					safeArgsInfo.setText("进程名称只能填0-4的数字！！");
 				}
 				else {
 					System.out.println("输入名称：" + RequestProgressName.getText());
